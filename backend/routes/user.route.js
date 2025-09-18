@@ -1,6 +1,6 @@
 import express from "express"
 import { adminOnly, protect } from "../middleware/auth.middleware.js"
-import { deleteUser, getUserById, getUsers } from "../controllers/user.controller.js"
+import { getUserById, getUsers } from "../controllers/user.controller.js"
 
 
 const router=express.Router()
