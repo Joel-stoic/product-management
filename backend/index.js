@@ -4,7 +4,7 @@ import { connectDB } from "./config/db.js"
 import authRoutes from "./routes/auth.route.js"
 import userRoutes from "./routes/user.route.js"
 import taskRoutes from "./routes/task.route.js"
-// import reportRoutes from "./routes/report.route.js"
+import reportRoutes from "./routes/report.route.js"
 import cors from "cors"
 dotenv.config()
 
@@ -21,7 +21,7 @@ app.use(cors({
 app.use('/api/auth',authRoutes)
 app.use('/api/users',userRoutes)
 app.use('/api/tasks',taskRoutes)
-// app.use('/api/reports',reportRoutes)
+app.use('/api/reports',reportRoutes)
 
 app.listen(PORT,()=>{
     connectDB()
